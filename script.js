@@ -8,7 +8,6 @@ menuIcon.onclick = () => {
 };
 
 let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -47,7 +46,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 
 const typed1 = new Typed('.multiple-text1', {
-    strings:['Software Developer', 'Backend Developer'],
+    strings:['Software Developer', 'Python Developer'],
     typeSpeed:100,
     backSpeed:100,
     typeDelay:1000,
@@ -55,7 +54,7 @@ const typed1 = new Typed('.multiple-text1', {
 });
 
 const typed2 = new Typed('.multiple-text2', {
-    strings:['Software Developer', 'Backend Developer'],
+    strings:['Software Developer', 'Python Developer'],
     typeSpeed:100,
     backSpeed:100,
     typeDelay:1000,
