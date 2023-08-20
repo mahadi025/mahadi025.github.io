@@ -1,5 +1,7 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
+let navLinks = document.querySelectorAll('header nav a')
+let sections = document.querySelectorAll('section')
 
 
 menuIcon.onclick = () => {
@@ -7,7 +9,7 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-let sections = document.querySelectorAll('section');
+
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -46,7 +48,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 
 const typed1 = new Typed('.multiple-text1', {
-    strings:['Software Developer', 'Python Developer'],
+    strings:['Software Developer', 'Data Scientist'],
     typeSpeed:100,
     backSpeed:100,
     typeDelay:1000,
@@ -54,10 +56,18 @@ const typed1 = new Typed('.multiple-text1', {
 });
 
 const typed2 = new Typed('.multiple-text2', {
-    strings:['Software Developer', 'Python Developer'],
+    strings:['Software Developer', 'Data Scientist'],
     typeSpeed:100,
     backSpeed:100,
     typeDelay:1000,
+    loop: true
+});
+
+const typed3 = new Typed('.multiple-text3', {
+    strings:['anything', 'and everything.'],
+    typeSpeed:80,
+    backSpeed:80,
+    typeDelay:2000,
     loop: true
 });
 
@@ -67,3 +77,7 @@ document.getElementById("theme-btn").addEventListener("click", () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 });
+
+function changePicture(){
+    console.log("Changed!!")
+}

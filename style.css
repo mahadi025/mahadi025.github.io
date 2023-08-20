@@ -96,6 +96,13 @@ section {
     animation: floatImage 4s ease-in-out infinite;
     border-radius: 50%;
     border: 3px solid var(--main-color);
+    transition: all 0.9s ease;
+    filter: grayscale(50%);
+}
+
+.home-img:hover img {
+    filter: grayscale(0%);
+    filter: drop-shadow(1px 1px 1px var(--main-color))
 }
 
 @keyframes floatImage {
@@ -123,6 +130,10 @@ section {
 
 span {
     color: var(--main-color);
+}
+
+.multiple-text3{
+    color: var(--text-color);
 }
 
 .home-content h1 {
