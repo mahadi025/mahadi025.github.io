@@ -23,7 +23,7 @@
             <a href="#skills">Skills</a>
             <a href="#project">Projects</a>
             <a href="#contact">Contact</a>
-            <button class="btn" id="theme-btn" ><i class='bx bx-adjust'></i></button>
+            <button class="btn" id="theme-btn"><i class='bx bx-adjust'></i></button>
         </nav>
     </header>
 
@@ -41,7 +41,7 @@
             </div>
             <a href="Mahadi.pdf" target="_blank" class="btn">Download Resume</a>
         </div>
-        <div  class="home-img">
+        <div class="home-img">
             <img src="images/Mahadi.png" alt="">
         </div>
     </section>
@@ -55,8 +55,11 @@
             <h2 class="heading">About <span>ME</span></h2>
             <h3><span class="multiple-text2"></span></h3>
             <p>I graduated from East West University with BSC in Computer Science Engineering. I love programming. I
-                know <span class="multiple-text2"><i>C</i></span>, <span class="multiple-text2"><i>C++</i></span>, <span class="multiple-text2"><i>JAVA</i></span>, <span class="multiple-text2"><i>Python</i></span>, <span class="multiple-text2"><i>JavaScript</i></span>. I like to build different kinds of Android
-                apps using <span class="multiple-text2"><b>Android Studio</b></span> and Website using <span class="multiple-text2"><b>Flask</b></span> and <span class="multiple-text2"><b>Django</b></span>. I
+                know <span class="multiple-text2"><i>C</i></span>, <span class="multiple-text2"><i>C++</i></span>, <span
+                    class="multiple-text2"><i>JAVA</i></span>, <span class="multiple-text2"><i>Python</i></span>, <span
+                    class="multiple-text2"><i>JavaScript</i></span>. I like to build different kinds of Android
+                apps using <span class="multiple-text2"><b>Android Studio</b></span> and Website using <span
+                    class="multiple-text2"><b>Flask</b></span> and <span class="multiple-text2"><b>Django</b></span>. I
                 also have experience in data science, machine learning, and image processing.
                 <br>
                 I like to learn from <span class="multiple-text3"></span>
@@ -163,7 +166,7 @@
                 <div class="project-layer">
                     <h4>Messenger Using MultiThread</h4>
                     <p></p>
-                    <a href="https://github.com/mahadi025/MultiThread_Messenger"><i class='bx bxl-github'
+                    <a href="https://github.com/mahadi025/MultiThread-Messenger"><i class='bx bxl-github'
                             target="_blank"></i></a>
                 </div>
             </div>
@@ -215,11 +218,11 @@
         <form action="#" name="submit-to-google-sheet">
             <div class="input-box">
                 <input name="Name" type="text" placeholder="Full Name">
-                <input name="Email"  type="email" placeholder="Email Address">
+                <input name="Email" type="email" placeholder="Email Address">
             </div>
             <div class="input-box">
                 <input name="Number" type="number" placeholder="Mobile Number">
-                <input name="Email Subject"  type="text" placeholder="Email Subject">
+                <input name="Email Subject" type="text" placeholder="Email Subject">
             </div>
             <textarea name="Message" id="" cols="30" rows="30" placeholder="Your Message"></textarea>
             <input type="submit" value="Send Message" class="btn">
@@ -238,12 +241,12 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwHj_yFySQJU4NxMpwWUxfsmWZPRw-4gUPofLnKzF34luhgcEKbVTL9r6CPvr011OVF/exec'
         const form = document.forms['submit-to-google-sheet']
-      
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
             document.forms["submit-to-google-sheet"].reset();
         })
     </script>
