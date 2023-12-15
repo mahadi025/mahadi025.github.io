@@ -18,7 +18,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height){
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
@@ -34,7 +34,7 @@ window.onscroll = () => {
 };
 
 
-ScrollReveal({ 
+ScrollReveal({
     reset: true,
     distance: '80px',
     duration: 2000,
@@ -48,26 +48,26 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 
 const typed1 = new Typed('.multiple-text1', {
-    strings:['Software Developer', 'Data Scientist'],
-    typeSpeed:100,
-    backSpeed:100,
-    typeDelay:1000,
+    strings: ['Software Developer', ''],
+    typeSpeed: 100,
+    backSpeed: 100,
+    typeDelay: 1000,
     loop: true
 });
 
 const typed2 = new Typed('.multiple-text2', {
-    strings:['Software Developer', 'Data Scientist'],
-    typeSpeed:100,
-    backSpeed:100,
-    typeDelay:1000,
+    strings: ['Software Developer', ''],
+    typeSpeed: 100,
+    backSpeed: 100,
+    typeDelay: 1000,
     loop: true
 });
 
 const typed3 = new Typed('.multiple-text3', {
-    strings:['anything', 'and everything.'],
-    typeSpeed:80,
-    backSpeed:80,
-    typeDelay:2000,
+    strings: ['anything', 'and everything.'],
+    typeSpeed: 80,
+    backSpeed: 80,
+    typeDelay: 2000,
     loop: true
 });
 
@@ -78,6 +78,6 @@ document.getElementById("theme-btn").addEventListener("click", () => {
     navbar.classList.remove('active');
 });
 
-function changePicture(){
+function changePicture() {
     console.log("Changed!!")
 }
