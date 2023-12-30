@@ -77,7 +77,3 @@ document.getElementById("theme-btn").addEventListener("click", () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 });
-
-function changePicture() {
-    console.log("Changed!!")
-}
