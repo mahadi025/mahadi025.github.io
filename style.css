@@ -21,7 +21,7 @@
 
 .light-mode {
     --bg-color: #fff;
-    --second-bg-color: #ede324a5;
+    --second-bg-color: #FFFDD0;
     --text-color: #1f242d;
     --main-color: rgb(208, 79, 96);
   }
@@ -89,6 +89,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--second-bg-color);
 }
 
 .home-img img {
@@ -207,6 +208,7 @@ span {
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
+    color: var(--text-color);
 }
 
 .about-content h3 {
@@ -216,6 +218,7 @@ span {
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    color: var(--text-color);
 }
 
 
@@ -255,6 +258,7 @@ span {
 
 .skills-box h3 {
     font-size: 2.6rem;
+    color: var(--text-color);
 }
 
 
