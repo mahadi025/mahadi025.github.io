@@ -48,22 +48,30 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 
 const typed1 = new Typed('.multiple-text1', {
-    strings: ['Software Developer', ''],
-    typeSpeed: 100,
-    backSpeed: 100,
+    strings: ['React', 'Angular'],
+    typeSpeed: 200,
+    backSpeed: 200,
     typeDelay: 1000,
     loop: true
 });
 
 const typed2 = new Typed('.multiple-text2', {
-    strings: ['Software Developer', ''],
+    strings: ['Django', 'Flask', 'ASP.NET'],
+    typeSpeed: 200,
+    backSpeed: 200,
+    typeDelay: 1000,
+    loop: true
+});
+
+const typed3 = new Typed('.multiple-text3', {
+    strings: ['FullStack Developer', ''],
     typeSpeed: 100,
     backSpeed: 100,
     typeDelay: 1000,
     loop: true
 });
 
-const typed3 = new Typed('.multiple-text3', {
+const typed4 = new Typed('.multiple-text4', {
     strings: ['anything', 'and everything.'],
     typeSpeed: 80,
     backSpeed: 80,
