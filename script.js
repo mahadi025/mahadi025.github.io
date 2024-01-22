@@ -21,7 +21,13 @@ window.onscroll = () => {
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                let targetLink = document.querySelector('header nav a[href="#' + id + '"]');
+                if (targetLink) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                    });
+                    targetLink.classList.add('active');
+                }
             });
         };
     });
