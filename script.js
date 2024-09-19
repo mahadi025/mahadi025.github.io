@@ -54,7 +54,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 
 const typed1 = new Typed('.multiple-text1', {
-    strings: ['React', 'Angular'],
+    strings: ['React', 'Angular', 'TailWindCSS'],
     typeSpeed: 200,
     backSpeed: 200,
     typeDelay: 1000,
