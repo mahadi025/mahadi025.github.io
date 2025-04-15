@@ -62,7 +62,7 @@ const typed1 = new Typed('.multiple-text1', {
 });
 
 const typed2 = new Typed('.multiple-text2', {
-    strings: ['Django', 'Flask', 'ASP.NET'],
+    strings: ['Django', 'Flask', 'ASP.NET', 'FoalTs'],
     typeSpeed: 200,
     backSpeed: 200,
     typeDelay: 1000,
@@ -70,7 +70,7 @@ const typed2 = new Typed('.multiple-text2', {
 });
 
 const typed3 = new Typed('.multiple-text3', {
-    strings: ['FullStack Developer', ''],
+    strings: ['Software Engineer', ''],
     typeSpeed: 100,
     backSpeed: 100,
     typeDelay: 1000,
