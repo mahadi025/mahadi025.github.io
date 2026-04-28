@@ -48,7 +48,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .project-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
@@ -87,7 +87,89 @@ const typed4 = new Typed('.multiple-text4', {
 
 
 document.getElementById("theme-btn").addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
+    const html = document.documentElement;
+    const current = html.getAttribute("data-theme");
+    html.setAttribute("data-theme", current === "luxury" ? "light" : "luxury");
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 });
+
+// ── Scroll-reveal IntersectionObserver ──
+(function () {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+})();
+
+// ── Particles ──
+(function () {
+    const canvas = document.getElementById('particles-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+
+    function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function getColor() {
+        const style = getComputedStyle(document.documentElement);
+        return style.getPropertyValue('--color-primary').trim() || '#888';
+    }
+
+    function Particle() {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.r = Math.random() * 2.5 + 1;
+        this.vx = (Math.random() - .5) * .5;
+        this.vy = (Math.random() - .5) * .5;
+        this.alpha = Math.random() * .5 + .2;
+    }
+
+    for (let i = 0; i < 60; i++) particles.push(new Particle());
+
+    function draw() {
+        ctx.clearRect(0, 0, W, H);
+        const col = getColor();
+        particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = col;
+            ctx.globalAlpha = p.alpha;
+            ctx.fill();
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > W) p.vx *= -1;
+            if (p.y < 0 || p.y > H) p.vy *= -1;
+        });
+
+        // draw connecting lines
+        ctx.globalAlpha = 1;
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < 100) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = col;
+                    ctx.globalAlpha = (1 - dist / 100) * .15;
+                    ctx.lineWidth = .8;
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(draw);
+    }
+    draw();
+})();
